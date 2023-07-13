@@ -1,5 +1,7 @@
-﻿/*Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа
+﻿//Напишите программу, которая принимает на вход трёхзначное число
+//и на выходе показывает вторую цифру этого числа
 
+/*
 int CutNum (int num)
 {
     int tens = num / 10;
@@ -10,11 +12,38 @@ int CutNum (int num)
 Console.Write("Введите трехзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int num1 = CutNum(num);
-Console.Write($"Новая версия {num} это {num1}");
+Console.Write($"Вторая цифра числа это: {num1}");
 */
 
-//Напишите программу, которая выводит третью цифру заданного числа.
+
+//Напишите программу, которая выводит третью цифру 
+//заданного числа.
+
 /*
+int ThirdDigit(int number)
+{
+    int result = -1;
+    if (number >= 100)
+    {
+        while (number > 999)
+        {
+            number = number / 10;
+        }
+        result = number % 10;
+    }
+    return result; 
+}
+    
+Console.Write("Введите число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+if (ThirdDigit(num1) == -1)
+Console.WriteLine("третьей цифры нет");
+else
+Console.WriteLine($"Третья цифра: {ThirdDigit(num1)}");
+*/
+
+
+/* Худший вариант для пользователя
 int CutNum(int[] num)
 {
     int count = num.Length;
@@ -29,7 +58,7 @@ int CutNum(int[] num)
     return pos;
 }
 
-Console.Write("Введите первые три цифры числа: ");
+Console.Write("Введите колличество цифр числа: ");
 int elementsCount = int.Parse(Console.ReadLine());
 int[] num = new int[elementsCount];
 for (int i = 0; i < num.Length; i++)
@@ -41,26 +70,11 @@ int num1 = CutNum(num);
 Console.Write("Вывод цифры: " + num1);
 */
 
-int ThirdDigit(int num)
-{
-    int count = 0; 
-    while(num / 10)
-    {
-        int units = num / 10;
-        int count = units * 10;
-        return units;
-        
-    }
-    
 
-}
-Console.Write("Введите число: ");
-int num = Convert.ToInt32(Console.ReadLine());
-int num1 = ThirdDigit(num);
-Console.Write("Третья цифра: " + num1);
+//Напишите программу, которая принимает на вход цифру, 
+//обозначающую день недели, 
+//и проверяет, является ли этот день выходным.
 
-
-//Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 /*
 bool DayWeek(int num1)
 {
